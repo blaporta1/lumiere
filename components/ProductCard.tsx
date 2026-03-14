@@ -2,7 +2,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Star } from 'lucide-react';
 import { Product } from '@/types';
-import { formatPrice } from '@/lib/stripe';
+import { formatPrice } from '@/lib/utils';
 
 interface Props {
   product: Product;
