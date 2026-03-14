@@ -5,7 +5,7 @@ import Link from 'next/link';
 import { Minus, Plus, X, ArrowLeft, ShoppingBag, ArrowRight } from 'lucide-react';
 import { useCart } from '@/context/CartContext';
 import CheckoutButton from '@/components/CheckoutButton';
-import { formatPrice } from '@/lib/stripe';
+import { formatPrice } from '@/lib/utils';
 import { SUBSCRIPTION_DISCOUNT } from '@/lib/products';
 
 export default function CartPage() {
