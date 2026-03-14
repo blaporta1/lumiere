@@ -7,7 +7,7 @@ import { LUMIERE_PRODUCT, SUBSCRIPTION_DISCOUNT } from '@/lib/products';
 import { useCart } from '@/context/CartContext';
 import IngredientGrid from '@/components/IngredientGrid';
 import ReviewCarousel from '@/components/ReviewCarousel';
-import { formatPrice } from '@/lib/stripe';
+import { formatPrice } from '@/lib/utils';
 import toast from 'react-hot-toast';
 import Link from 'next/link';
 
