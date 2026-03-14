@@ -4,7 +4,7 @@ import { useCart } from '@/context/CartContext';
 import { X, Minus, Plus, ShoppingBag, ArrowRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { formatPrice } from '@/lib/stripe';
+import { formatPrice } from '@/lib/utils';
 import CheckoutButton from './CheckoutButton';
 
 export default function CartDrawer() {
