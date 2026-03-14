@@ -2,7 +2,6 @@
 
 import { useState } from 'react';
 import { Mail, MapPin, Clock, Send, Check } from 'lucide-react';
-import type { Metadata } from 'next';
 
 const contactInfo = [
   {
