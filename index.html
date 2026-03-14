@@ -1,0 +1,1630 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Lumière — Peptide Collagen Hydrogel Eye Patch</title>
+  <meta name="description" content="Radiance restored. Youth renewed. Lumière Peptide Collagen Hydrogel Eye Patches — clinically proven peptide complex for visibly brighter, firmer under-eyes in 20 minutes." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400;1,500&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold:       #C9A97B;
+      --gold-light: #E8D5B7;
+      --gold-dark:  #A8885A;
+      --champagne:  #F5EDD9;
+      --cream:      #FAF7F5;
+      --charcoal:   #1A1A1A;
+      --warm-gray:  #6B6560;
+      --blush:      #F9D9DE;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Inter', sans-serif;
+      background: var(--cream);
+      color: var(--charcoal);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    ::selection { background: var(--gold-light); color: var(--charcoal); }
+
+    ::-webkit-scrollbar { width: 5px; }
+    ::-webkit-scrollbar-track { background: var(--cream); }
+    ::-webkit-scrollbar-thumb { background: var(--gold); border-radius: 3px; }
+
+    /* ── Typography ── */
+    .serif { font-family: 'Cormorant Garamond', Georgia, serif; }
+    .label {
+      font-size: 0.625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 500;
+    }
+
+    /* ── Navbar ── */
+    nav {
+      position: fixed;
+      top: 0; left: 0; right: 0;
+      z-index: 100;
+      padding: 0 2rem;
+      height: 72px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      transition: background 0.4s, box-shadow 0.4s, border-color 0.4s;
+    }
+    nav.scrolled {
+      background: rgba(250,247,245,0.92);
+      backdrop-filter: blur(20px);
+      box-shadow: 0 2px 20px rgba(26,26,26,0.07);
+      border-bottom: 1px solid rgba(201,169,123,0.15);
+    }
+    .nav-logo {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.5rem;
+      letter-spacing: 0.25em;
+      text-decoration: none;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      transition: color 0.3s;
+    }
+    nav:not(.scrolled) .nav-logo { color: white; }
+    nav.scrolled .nav-logo { color: var(--charcoal); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 2.5rem;
+      list-style: none;
+    }
+    .nav-links a {
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    nav:not(.scrolled) .nav-links a { color: rgba(255,255,255,0.8); }
+    nav.scrolled .nav-links a { color: var(--warm-gray); }
+    .nav-links a:hover { color: var(--gold) !important; }
+    .nav-cta {
+      padding: 0.625rem 1.5rem;
+      background: var(--gold);
+      color: white !important;
+      border-radius: 100px;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 500;
+      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+    }
+    .nav-cta:hover {
+      background: var(--gold-dark) !important;
+      color: white !important;
+      transform: scale(1.04);
+      box-shadow: 0 4px 20px rgba(201,169,123,0.35);
+    }
+    @media (max-width: 768px) { .nav-links { display: none; } }
+
+    /* ── Buttons ── */
+    .btn-primary {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.5rem;
+      background: var(--gold);
+      color: white;
+      border: none;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.25s, box-shadow 0.25s;
+    }
+    .btn-primary:hover {
+      background: var(--gold-dark);
+      transform: scale(1.03);
+      box-shadow: 0 6px 28px rgba(201,169,123,0.35);
+    }
+    .btn-outline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.5rem;
+      background: transparent;
+      color: var(--gold-dark);
+      border: 2px solid var(--gold);
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-outline:hover {
+      background: rgba(201,169,123,0.08);
+      transform: scale(1.03);
+    }
+    .btn-dark {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 1rem 2.5rem;
+      background: var(--charcoal);
+      color: white;
+      border: none;
+      border-radius: 100px;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      text-decoration: none;
+      transition: background 0.25s, transform 0.25s;
+    }
+    .btn-dark:hover { background: var(--gold); transform: scale(1.03); }
+
+    /* ── Animations ── */
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(32px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50%       { transform: translateY(-14px); }
+    }
+    @keyframes shimmer {
+      0%   { background-position: -200% 0; }
+      100% { background-position:  200% 0; }
+    }
+    @keyframes pulseDot {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50%       { opacity: 0.6; transform: scale(0.85); }
+    }
+    @keyframes spin {
+      to { transform: rotate(360deg); }
+    }
+
+    .fade-up {
+      opacity: 0;
+      animation: fadeUp 0.9s cubic-bezier(0.22,1,0.36,1) forwards;
+    }
+    .delay-1 { animation-delay: 0.1s; }
+    .delay-2 { animation-delay: 0.22s; }
+    .delay-3 { animation-delay: 0.34s; }
+    .delay-4 { animation-delay: 0.46s; }
+
+    .floating { animation: float 7s ease-in-out infinite; }
+
+    /* Intersection Observer reveal */
+    .reveal {
+      opacity: 0;
+      transform: translateY(28px);
+      transition: opacity 0.75s ease, transform 0.75s ease;
+    }
+    .reveal.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .reveal-delay-1 { transition-delay: 0.1s; }
+    .reveal-delay-2 { transition-delay: 0.2s; }
+    .reveal-delay-3 { transition-delay: 0.3s; }
+    .reveal-delay-4 { transition-delay: 0.4s; }
+
+    /* ── Layout ── */
+    .container { max-width: 1280px; margin: 0 auto; padding: 0 2rem; }
+    .section { padding: 5rem 0; }
+    @media (min-width: 1024px) { .section { padding: 7rem 0; } }
+
+    /* ── HERO ── */
+    #hero {
+      position: relative;
+      min-height: 100vh;
+      display: flex;
+      align-items: flex-end;
+      padding-bottom: 5rem;
+      overflow: hidden;
+    }
+    #hero .bg {
+      position: absolute;
+      inset: 0;
+      background-image: url('https://images.unsplash.com/photo-1512290923902-8a9f81dc236c?w=1800&q=85');
+      background-size: cover;
+      background-position: center;
+    }
+    #hero .overlay {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to top, rgba(26,26,26,0.88) 0%, rgba(26,26,26,0.42) 50%, rgba(26,26,26,0.18) 100%);
+    }
+    #hero .overlay-side {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to right, rgba(26,26,26,0.55) 0%, transparent 60%);
+    }
+    .hero-content {
+      position: relative;
+      z-index: 10;
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 2rem;
+      width: 100%;
+    }
+    .hero-eyebrow {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 1.5rem;
+    }
+    .hero-eyebrow span:first-child {
+      height: 1px;
+      width: 3rem;
+      background: rgba(201,169,123,0.7);
+      display: block;
+    }
+    .hero-eyebrow-text {
+      color: rgba(201,169,123,0.9);
+      font-size: 0.625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .hero-h1 {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(3.5rem, 8vw, 7rem);
+      line-height: 0.95;
+      color: white;
+      margin-bottom: 1.5rem;
+    }
+    .hero-h1 em {
+      font-style: italic;
+      background: linear-gradient(135deg, #C9A97B, #E8D5B7, #B8924A);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+    .hero-sub {
+      color: rgba(255,255,255,0.72);
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      max-width: 28rem;
+      margin-bottom: 2rem;
+    }
+    .hero-rating {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      margin-bottom: 2rem;
+    }
+    .stars { display: flex; gap: 2px; }
+    .star { color: var(--gold); font-size: 0.875rem; }
+    .rating-text { color: rgba(255,255,255,0.55); font-size: 0.8125rem; }
+    .hero-ctas {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 1rem;
+      align-items: center;
+    }
+
+    /* Floating product image */
+    .hero-product {
+      position: absolute;
+      top: 50%;
+      right: 6rem;
+      transform: translateY(-50%);
+      width: 22rem;
+      height: 22rem;
+      display: none;
+    }
+    @media (min-width: 1024px) { .hero-product { display: block; } }
+    .hero-product-glow {
+      position: absolute;
+      inset: 0;
+      border-radius: 50%;
+      background: rgba(201,169,123,0.18);
+      filter: blur(40px);
+    }
+    .hero-product img {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      filter: drop-shadow(0 24px 48px rgba(0,0,0,0.4));
+    }
+
+    /* Scroll indicator */
+    .scroll-hint {
+      position: absolute;
+      bottom: 2.5rem;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .scroll-hint span {
+      color: rgba(255,255,255,0.3);
+      font-size: 0.5625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+    }
+    .scroll-line {
+      width: 1px;
+      height: 3rem;
+      background: linear-gradient(to bottom, rgba(255,255,255,0.3), transparent);
+    }
+
+    /* ── TRUST BAR ── */
+    #trust {
+      border-top: 1px solid rgba(201,169,123,0.15);
+      border-bottom: 1px solid rgba(201,169,123,0.15);
+      background: white;
+    }
+    .trust-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @media (min-width: 768px) { .trust-grid { grid-template-columns: repeat(4, 1fr); } }
+    .trust-item {
+      display: flex;
+      align-items: center;
+      gap: 1rem;
+      padding: 1.5rem;
+      border-right: 1px solid rgba(201,169,123,0.12);
+      border-bottom: 1px solid rgba(201,169,123,0.12);
+      transition: background 0.2s;
+    }
+    .trust-item:hover { background: rgba(201,169,123,0.04); }
+    .trust-icon {
+      width: 2.5rem;
+      height: 2.5rem;
+      border-radius: 50%;
+      background: var(--champagne);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .trust-label { font-size: 0.8125rem; font-weight: 500; color: var(--charcoal); }
+    .trust-sub { font-size: 0.6875rem; color: var(--warm-gray); }
+
+    /* ── FEATURE SECTION ── */
+    #feature .grid {
+      display: grid;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (min-width: 1024px) { #feature .grid { grid-template-columns: 1fr 1fr; gap: 6rem; } }
+    .product-image-wrap {
+      position: relative;
+    }
+    .product-main-img {
+      width: 100%;
+      aspect-ratio: 1;
+      object-fit: cover;
+      border-radius: 3rem;
+    }
+    .stat-card {
+      position: absolute;
+      bottom: -1.5rem;
+      right: -2rem;
+      background: white;
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 40px rgba(26,26,26,0.12);
+      padding: 1.25rem 1.5rem;
+    }
+    .stat-card .number {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.5rem;
+      color: var(--gold);
+      line-height: 1;
+    }
+    .stat-card .stat-label { font-size: 0.8125rem; font-weight: 500; color: var(--charcoal); }
+    .stat-card .stat-sub { font-size: 0.6875rem; color: var(--warm-gray); }
+    .review-card {
+      position: absolute;
+      top: -1.5rem;
+      left: -2rem;
+      background: var(--charcoal);
+      border-radius: 1.5rem;
+      box-shadow: 0 8px 40px rgba(26,26,26,0.2);
+      padding: 1.125rem 1.25rem;
+      max-width: 14rem;
+    }
+    .review-card .review-stars { color: var(--gold); font-size: 0.75rem; margin-bottom: 0.4rem; }
+    .review-card .review-quote { color: rgba(255,255,255,0.8); font-size: 0.6875rem; line-height: 1.5; }
+    .review-card .review-author { color: var(--gold); font-size: 0.625rem; margin-top: 0.5rem; letter-spacing: 0.05em; }
+
+    .section-label { margin-bottom: 1rem; }
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.25rem, 4vw, 3.25rem);
+      line-height: 1.1;
+      color: var(--charcoal);
+      margin-bottom: 1.75rem;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+    .section-body { color: var(--warm-gray); line-height: 1.75; font-size: 1.0625rem; margin-bottom: 2rem; }
+    .benefit-list { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2.5rem; }
+    .benefit-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.75rem;
+      font-size: 0.9375rem;
+      color: var(--charcoal);
+    }
+    .benefit-check {
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      background: var(--champagne);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-shrink: 0;
+      margin-top: 0.125rem;
+      color: var(--gold-dark);
+      font-size: 0.6875rem;
+    }
+    .price-row { display: flex; align-items: baseline; gap: 1rem; margin-bottom: 1.5rem; }
+    .price-main { font-family: 'Cormorant Garamond', serif; font-size: 2.75rem; color: var(--charcoal); }
+    .price-compare { color: var(--warm-gray); font-size: 1.125rem; text-decoration: line-through; }
+    .price-badge {
+      background: var(--champagne);
+      color: #8B6D3E;
+      font-size: 0.625rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+    }
+    .cta-row { display: flex; flex-wrap: wrap; gap: 1rem; }
+
+    /* ── BENEFITS DARK ── */
+    #benefits {
+      background: var(--charcoal);
+      position: relative;
+      overflow: hidden;
+    }
+    #benefits::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+      opacity: 0.04;
+      pointer-events: none;
+    }
+    .benefits-header { text-align: center; margin-bottom: 4rem; }
+    .benefits-header .section-label { color: var(--gold); }
+    .benefits-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.25rem, 4vw, 3.75rem);
+      line-height: 1.1;
+      color: white;
+    }
+    .benefits-title em { font-style: italic; background: linear-gradient(135deg, #C9A97B, #E8D5B7, #B8924A); -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text; }
+    .benefits-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @media (min-width: 768px) { .benefits-grid { grid-template-columns: repeat(3, 1fr); } }
+    .benefit-card {
+      position: relative;
+      padding: 2rem;
+      border: 1px solid rgba(255,255,255,0.08);
+      border-radius: 1.5rem;
+      transition: border-color 0.3s, background 0.3s;
+    }
+    .benefit-card:hover {
+      border-color: rgba(201,169,123,0.4);
+      background: rgba(255,255,255,0.03);
+    }
+    .benefit-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: rgba(201,169,123,0.2);
+      position: absolute;
+      top: 1.25rem;
+      right: 1.5rem;
+      transition: color 0.3s;
+    }
+    .benefit-card:hover .benefit-num { color: rgba(201,169,123,0.4); }
+    .benefit-card p { color: rgba(255,255,255,0.7); font-size: 0.875rem; line-height: 1.65; padding-right: 2.5rem; }
+
+    /* ── INGREDIENTS ── */
+    #ingredients { background: var(--cream); }
+    .ingredients-header {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    @media (min-width: 1024px) {
+      .ingredients-header { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+    }
+    .ingredients-sub { color: var(--warm-gray); font-size: 0.9375rem; max-width: 22rem; }
+    .ingredients-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 1rem;
+    }
+    @media (min-width: 768px) { .ingredients-grid { grid-template-columns: repeat(3, 1fr); } }
+    .ing-card {
+      padding: 1.5rem;
+      background: white;
+      border: 1px solid rgba(201,169,123,0.15);
+      border-radius: 1.75rem;
+      cursor: pointer;
+      transition: all 0.3s;
+    }
+    .ing-card:hover, .ing-card.active {
+      background: var(--charcoal);
+      border-color: var(--charcoal);
+      transform: scale(1.02);
+      box-shadow: 0 8px 40px rgba(26,26,26,0.12);
+    }
+    .ing-icon { font-size: 1.75rem; margin-bottom: 0.75rem; display: block; }
+    .ing-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.125rem;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+      transition: color 0.3s;
+    }
+    .ing-card:hover .ing-name, .ing-card.active .ing-name { color: white; }
+    .ing-desc {
+      font-size: 0.75rem;
+      color: var(--warm-gray);
+      line-height: 1.6;
+      transition: color 0.3s;
+      display: none;
+    }
+    .ing-card.active .ing-desc { display: block; color: rgba(255,255,255,0.65); }
+    .ing-hint {
+      font-size: 0.5625rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-top: 0.5rem;
+    }
+    .ing-card.active .ing-hint { display: none; }
+
+    /* ── HOW TO USE ── */
+    #how-to-use .how-grid {
+      display: grid;
+      gap: 4rem;
+      align-items: center;
+    }
+    @media (min-width: 1024px) { #how-to-use .how-grid { grid-template-columns: 1fr 1fr; gap: 6rem; } }
+    .steps-list { display: flex; flex-direction: column; gap: 1.5rem; }
+    .step {
+      display: flex;
+      gap: 1.25rem;
+    }
+    .step-num {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 3rem;
+      color: var(--gold-light);
+      line-height: 1;
+      flex-shrink: 0;
+      width: 2.5rem;
+    }
+    .step-text { color: var(--warm-gray); font-size: 0.9375rem; line-height: 1.65; padding-top: 0.5rem; }
+    .how-img-wrap {
+      position: relative;
+    }
+    .how-img {
+      width: 100%;
+      aspect-ratio: 4/5;
+      object-fit: cover;
+      border-radius: 3rem;
+    }
+    .how-overlay {
+      position: absolute;
+      inset: 0;
+      border-radius: 3rem;
+      background: linear-gradient(to top, rgba(26,26,26,0.55) 0%, transparent 60%);
+    }
+    .how-caption {
+      position: absolute;
+      bottom: 2rem;
+      left: 2rem;
+      right: 2rem;
+    }
+    .how-caption em {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 2rem;
+      color: white;
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+    .how-caption span { color: rgba(255,255,255,0.6); font-size: 0.875rem; }
+
+    /* ── REVIEWS ── */
+    #reviews { background: var(--cream); }
+    .reviews-header {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      margin-bottom: 3rem;
+    }
+    @media (min-width: 1024px) {
+      .reviews-header { flex-direction: row; align-items: flex-end; justify-content: space-between; }
+    }
+    .avg-rating-block { text-align: right; }
+    .avg-num { font-family: 'Cormorant Garamond', serif; font-size: 3.5rem; color: var(--charcoal); line-height: 1; }
+    .avg-count { color: var(--warm-gray); font-size: 0.75rem; margin-top: 0.25rem; }
+    .reviews-carousel { position: relative; overflow: hidden; }
+    .reviews-track {
+      display: flex;
+      gap: 1.5rem;
+      transition: transform 0.5s cubic-bezier(0.22,1,0.36,1);
+    }
+    .review-card-big {
+      flex: none;
+      width: calc(100% - 1.5rem);
+      background: white;
+      border-radius: 1.75rem;
+      padding: 2rem;
+      box-shadow: 0 2px 20px rgba(26,26,26,0.06);
+    }
+    @media (min-width: 640px) { .review-card-big { width: calc(50% - 0.75rem); } }
+    @media (min-width: 1024px) { .review-card-big { width: calc(33.333% - 1rem); } }
+    .review-meta {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 1rem;
+    }
+    .review-stars-big { color: var(--gold); font-size: 0.875rem; }
+    .verified { font-size: 0.625rem; color: #059669; letter-spacing: 0.05em; }
+    .review-title-big {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.125rem;
+      color: var(--charcoal);
+      margin-bottom: 0.625rem;
+      line-height: 1.3;
+    }
+    .review-body-big { color: var(--warm-gray); font-size: 0.8125rem; line-height: 1.65; margin-bottom: 1.25rem; }
+    .review-author-row {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      padding-top: 1rem;
+      border-top: 1px solid rgba(201,169,123,0.12);
+    }
+    .reviewer-avatar {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--gold), var(--gold-light));
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem;
+      font-weight: 500;
+    }
+    .reviewer-name { font-size: 0.875rem; font-weight: 500; color: var(--charcoal); }
+    .reviewer-location { font-size: 0.6875rem; color: var(--warm-gray); }
+    .carousel-controls {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 1rem;
+      margin-top: 2.5rem;
+    }
+    .carousel-btn {
+      width: 2.75rem;
+      height: 2.75rem;
+      border-radius: 50%;
+      border: 1px solid rgba(201,169,123,0.3);
+      background: transparent;
+      color: var(--warm-gray);
+      cursor: pointer;
+      font-size: 1.25rem;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: all 0.2s;
+    }
+    .carousel-btn:hover {
+      border-color: var(--gold);
+      color: var(--gold);
+      transform: scale(1.08);
+    }
+
+    /* ── SUBSCRIPTION ── */
+    #subscription { background: var(--charcoal); position: relative; overflow: hidden; }
+    #subscription::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='200' height='200'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.85' numOctaves='4' stitchTiles='stitch'/%3E%3CfeColorMatrix type='saturate' values='0'/%3E%3C/filter%3E%3Crect width='200' height='200' filter='url(%23n)' opacity='0.05'/%3E%3C/svg%3E");
+      opacity: 0.04;
+      pointer-events: none;
+    }
+    .sub-grid {
+      display: grid;
+      gap: 1.5rem;
+    }
+    @media (min-width: 768px) { .sub-grid { grid-template-columns: 1fr 1fr; } }
+    .sub-card {
+      border-radius: 1.75rem;
+      padding: 2.5rem;
+      border: 1px solid rgba(255,255,255,0.1);
+      transition: border-color 0.3s;
+    }
+    .sub-card:hover { border-color: rgba(201,169,123,0.4); }
+    .sub-card.featured {
+      background: var(--gold);
+      border-color: transparent;
+      position: relative;
+    }
+    .sub-type { font-size: 0.6875rem; letter-spacing: 0.15em; text-transform: uppercase; margin-bottom: 1rem; }
+    .sub-card:not(.featured) .sub-type { color: rgba(255,255,255,0.5); }
+    .sub-card.featured .sub-type { color: rgba(255,255,255,0.75); }
+    .sub-price-main { font-family: 'Cormorant Garamond', serif; font-size: 3rem; }
+    .sub-card:not(.featured) .sub-price-main { color: white; }
+    .sub-card.featured .sub-price-main { color: white; }
+    .sub-price-period { font-family: 'Inter', sans-serif; font-size: 1.125rem; color: rgba(255,255,255,0.6); }
+    .sub-compare { font-size: 0.875rem; color: rgba(255,255,255,0.5); margin-bottom: 1.5rem; }
+    .sub-features { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; margin-bottom: 2rem; }
+    .sub-feature {
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      font-size: 0.875rem;
+    }
+    .sub-card:not(.featured) .sub-feature { color: rgba(255,255,255,0.7); }
+    .sub-card.featured .sub-feature { color: white; }
+    .sub-check { color: rgba(255,255,255,0.6); font-size: 0.75rem; }
+    .popular-badge {
+      position: absolute;
+      top: 1rem;
+      right: 1rem;
+      background: white;
+      color: var(--gold-dark);
+      font-size: 0.5625rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      padding: 0.25rem 0.75rem;
+      border-radius: 100px;
+      font-weight: 700;
+    }
+    .sub-btn-white {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.875rem;
+      border-radius: 100px;
+      background: white;
+      color: var(--gold-dark);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 600;
+      border: none;
+      cursor: pointer;
+      transition: transform 0.2s, box-shadow 0.2s;
+    }
+    .sub-btn-white:hover { transform: scale(1.03); box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    .sub-btn-outline-white {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 0.5rem;
+      width: 100%;
+      padding: 0.875rem;
+      border-radius: 100px;
+      background: transparent;
+      color: rgba(255,255,255,0.8);
+      border: 1px solid rgba(255,255,255,0.25);
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      transition: border-color 0.2s, color 0.2s;
+    }
+    .sub-btn-outline-white:hover { border-color: rgba(255,255,255,0.6); color: white; }
+
+    /* ── BRAND STORY ── */
+    #story { background: linear-gradient(180deg, var(--cream) 0%, var(--champagne) 100%); text-align: center; }
+    .story-icon { font-size: 2rem; color: var(--gold); display: block; margin: 0 auto 1.5rem; }
+    .story-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 4.5rem); line-height: 1; margin-bottom: 2rem; }
+    .story-title em { font-style: italic; }
+    .story-body { color: var(--warm-gray); font-size: 1.0625rem; line-height: 1.75; max-width: 36rem; margin: 0 auto 2.5rem; }
+    .story-ctas { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+    /* ── GUARANTEE ── */
+    #guarantee {
+      border-top: 1px solid rgba(201,169,123,0.15);
+      border-bottom: 1px solid rgba(201,169,123,0.15);
+      background: white;
+    }
+    .guarantee-grid {
+      display: grid;
+      grid-template-columns: repeat(1, 1fr);
+    }
+    @media (min-width: 768px) {
+      .guarantee-grid { grid-template-columns: repeat(3, 1fr); }
+    }
+    .guarantee-item {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+      padding: 2rem;
+      border-right: 1px solid rgba(201,169,123,0.12);
+      border-bottom: 1px solid rgba(201,169,123,0.12);
+    }
+    .guarantee-icon {
+      width: 3rem;
+      height: 3rem;
+      border-radius: 50%;
+      background: var(--charcoal);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.125rem;
+      flex-shrink: 0;
+    }
+    .guarantee-label { font-size: 0.9375rem; font-weight: 500; color: var(--charcoal); }
+    .guarantee-sub { font-size: 0.8125rem; color: var(--warm-gray); }
+
+    /* ── FINAL CTA ── */
+    #cta { text-align: center; }
+    .cta-title { font-family: 'Cormorant Garamond', serif; font-size: clamp(2.5rem, 5vw, 5rem); line-height: 1; margin-bottom: 1.5rem; }
+    .cta-title em { font-style: italic; color: var(--gold); }
+    .cta-body { color: var(--warm-gray); font-size: 1.0625rem; line-height: 1.75; max-width: 32rem; margin: 0 auto 2.5rem; }
+    .cta-btns { display: flex; flex-wrap: wrap; justify-content: center; gap: 1rem; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: var(--charcoal);
+      border-radius: 3rem 3rem 0 0;
+      margin-top: 6rem;
+    }
+    .footer-newsletter {
+      border-bottom: 1px solid rgba(255,255,255,0.08);
+      padding: 4rem 0;
+    }
+    .footer-newsletter .inner {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+      align-items: flex-start;
+    }
+    @media (min-width: 768px) {
+      .footer-newsletter .inner { flex-direction: row; align-items: center; justify-content: space-between; }
+    }
+    .newsletter-heading { font-family: 'Cormorant Garamond', serif; font-size: 2rem; color: white; margin-bottom: 0.25rem; }
+    .newsletter-sub { color: rgba(255,255,255,0.5); font-size: 0.875rem; }
+    .newsletter-form { display: flex; gap: 0.75rem; width: 100%; max-width: 26rem; }
+    .newsletter-input {
+      flex: 1;
+      padding: 0.75rem 1.25rem;
+      border-radius: 100px;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      color: white;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.875rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+    .newsletter-input::placeholder { color: rgba(255,255,255,0.35); }
+    .newsletter-input:focus { border-color: var(--gold); }
+    .newsletter-btn {
+      padding: 0.75rem 1.5rem;
+      border-radius: 100px;
+      background: var(--gold);
+      color: white;
+      border: none;
+      font-family: 'Inter', sans-serif;
+      font-size: 0.6875rem;
+      letter-spacing: 0.15em;
+      text-transform: uppercase;
+      font-weight: 500;
+      cursor: pointer;
+      transition: background 0.2s, transform 0.2s;
+      white-space: nowrap;
+    }
+    .newsletter-btn:hover { background: var(--gold-dark); transform: scale(1.04); }
+    .footer-main { padding: 4rem 0; }
+    .footer-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.5rem;
+    }
+    @media (min-width: 768px) { .footer-grid { grid-template-columns: 2fr 1fr 1fr 1fr 1fr; } }
+    .footer-logo { font-family: 'Cormorant Garamond', serif; font-size: 1.5rem; letter-spacing: 0.25em; color: white; margin-bottom: 0.75rem; display: flex; align-items: center; gap: 0.5rem; }
+    .footer-tagline { color: rgba(255,255,255,0.4); font-size: 0.75rem; line-height: 1.5; margin-bottom: 1.5rem; }
+    .social-links { display: flex; gap: 0.75rem; }
+    .social-link {
+      width: 2.25rem;
+      height: 2.25rem;
+      border-radius: 50%;
+      border: 1px solid rgba(255,255,255,0.15);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: rgba(255,255,255,0.45);
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: all 0.2s;
+    }
+    .social-link:hover { border-color: var(--gold); color: var(--gold); }
+    .footer-col-title {
+      font-size: 0.625rem;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: white;
+      font-weight: 500;
+      margin-bottom: 1.25rem;
+    }
+    .footer-links { list-style: none; display: flex; flex-direction: column; gap: 0.75rem; }
+    .footer-links a { color: rgba(255,255,255,0.45); font-size: 0.875rem; text-decoration: none; transition: color 0.2s; }
+    .footer-links a:hover { color: rgba(201,169,123,0.9); }
+    .footer-bottom {
+      padding: 2rem 0;
+      border-top: 1px solid rgba(255,255,255,0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      align-items: center;
+    }
+    @media (min-width: 768px) { .footer-bottom { flex-direction: row; justify-content: space-between; } }
+    .footer-copy { color: rgba(255,255,255,0.25); font-size: 0.75rem; }
+    .footer-status { display: flex; align-items: center; gap: 0.5rem; }
+    .status-dot {
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 50%;
+      background: #10B981;
+      animation: pulseDot 3s ease-in-out infinite;
+    }
+    .footer-status span { color: rgba(255,255,255,0.25); font-size: 0.625rem; letter-spacing: 0.15em; text-transform: uppercase; font-family: monospace; }
+    .footer-stripe { color: rgba(255,255,255,0.2); font-size: 0.6875rem; letter-spacing: 0.1em; }
+
+    /* ── Cart notification ── */
+    #cart-toast {
+      position: fixed;
+      top: 5rem;
+      right: 1.5rem;
+      z-index: 200;
+      background: var(--charcoal);
+      color: white;
+      padding: 1rem 1.5rem;
+      border-radius: 100px;
+      font-size: 0.8125rem;
+      letter-spacing: 0.05em;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.2);
+      display: flex;
+      align-items: center;
+      gap: 0.625rem;
+      transform: translateY(-1rem);
+      opacity: 0;
+      transition: all 0.4s cubic-bezier(0.22,1,0.36,1);
+      pointer-events: none;
+    }
+    #cart-toast.show { transform: translateY(0); opacity: 1; }
+    #cart-count {
+      position: fixed;
+      top: 1rem;
+      right: 1rem;
+      background: var(--gold);
+      color: white;
+      width: 1.25rem;
+      height: 1.25rem;
+      border-radius: 50%;
+      font-size: 0.625rem;
+      font-weight: 700;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      z-index: 150;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Cart toast notification -->
+  <div id="cart-toast">✦ Added to cart!</div>
+
+  <!-- ── NAVBAR ── -->
+  <nav id="navbar">
+    <a href="#" class="nav-logo">✦ LUMIÈRE</a>
+    <ul class="nav-links">
+      <li><a href="#feature">Product</a></li>
+      <li><a href="#ingredients">Formula</a></li>
+      <li><a href="#reviews">Reviews</a></li>
+      <li><a href="#story">About</a></li>
+      <li><a href="#cta" class="nav-cta">Shop Now</a></li>
+    </ul>
+  </nav>
+
+  <!-- ── HERO ── -->
+  <section id="hero">
+    <div class="bg"></div>
+    <div class="overlay"></div>
+    <div class="overlay-side"></div>
+
+    <!-- Floating product image -->
+    <div class="hero-product floating" style="animation-delay:0.5s">
+      <div class="hero-product-glow"></div>
+      <img src="public/images/product.jpg" alt="Lumière Eye Patch" />
+    </div>
+
+    <div class="hero-content">
+      <div class="hero-eyebrow fade-up">
+        <span></span>
+        <span class="hero-eyebrow-text">New Ritual Collection</span>
+      </div>
+      <h1 class="hero-h1 fade-up delay-1">
+        Radiance<br><em>Restored.</em>
+      </h1>
+      <p class="hero-sub fade-up delay-2">
+        The science of youth, distilled into 20 minutes. Our Peptide Collagen Hydrogel Eye Patches awaken the skin you thought time had claimed.
+      </p>
+      <div class="hero-rating fade-up delay-3">
+        <div class="stars">
+          <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+        </div>
+        <span class="rating-text">5.0 · 2,400+ verified reviews</span>
+      </div>
+      <div class="hero-ctas fade-up delay-4">
+        <button class="btn-primary" onclick="addToCart()">Shop Now — $48.00 →</button>
+        <a href="#feature" style="color:rgba(255,255,255,0.65);font-size:0.875rem;text-decoration:none;transition:color 0.2s" onmouseover="this.style.color='white'" onmouseout="this.style.color='rgba(255,255,255,0.65)'">Learn More →</a>
+      </div>
+    </div>
+
+    <div class="scroll-hint">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ── TRUST BAR ── -->
+  <section id="trust">
+    <div class="container">
+      <div class="trust-grid">
+        <div class="trust-item">
+          <div class="trust-icon">🔬</div>
+          <div>
+            <div class="trust-label">Dermatologist Tested</div>
+            <div class="trust-sub">Clinically validated formula</div>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">🌿</div>
+          <div>
+            <div class="trust-label">Cruelty-Free</div>
+            <div class="trust-sub">Certified by Leaping Bunny</div>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">⚗️</div>
+          <div>
+            <div class="trust-label">Science-Backed</div>
+            <div class="trust-sub">Peer-reviewed ingredients</div>
+          </div>
+        </div>
+        <div class="trust-item">
+          <div class="trust-icon">✨</div>
+          <div>
+            <div class="trust-label">Clean Beauty</div>
+            <div class="trust-sub">Free of 1,800+ harmful ingredients</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FEATURE ── -->
+  <section id="feature" class="section">
+    <div class="container">
+      <div class="grid">
+        <div class="product-image-wrap reveal">
+          <img class="product-main-img" src="public/images/product.jpg" alt="Lumière Peptide Eye Patch" />
+          <div class="stat-card">
+            <div class="number">20</div>
+            <div class="stat-label">Minutes</div>
+            <div class="stat-sub">to visibly brighter eyes</div>
+          </div>
+          <div class="review-card">
+            <div class="review-stars">★★★★★</div>
+            <div class="review-quote">"My dark circles have visibly faded after just two weeks."</div>
+            <div class="review-author">— Sophia L., New York</div>
+          </div>
+        </div>
+        <div class="reveal reveal-delay-2">
+          <p class="label section-label">Hero Product</p>
+          <h2 class="section-title">Peptide Collagen<br><em>Hydrogel Eye Patch</em></h2>
+          <p class="section-body">Engineered with a bioactive complex of collagen-stimulating peptides, niacinamide, caffeine, and Vitamin B12 to visibly firm, brighten, and deeply hydrate the delicate under-eye area.</p>
+          <ul class="benefit-list">
+            <li class="benefit-item"><span class="benefit-check">✓</span>Visibly reduces dark circles and puffiness in 20 minutes</li>
+            <li class="benefit-item"><span class="benefit-check">✓</span>Peptide complex stimulates natural collagen production</li>
+            <li class="benefit-item"><span class="benefit-check">✓</span>Ultra-hydrating hydrogel locks moisture for 72 hours</li>
+            <li class="benefit-item"><span class="benefit-check">✓</span>Suitable for all skin types including sensitive skin</li>
+          </ul>
+          <div class="price-row">
+            <span class="price-main">$48.00</span>
+            <span class="price-compare">$64.00</span>
+            <span class="price-badge">Save 25%</span>
+          </div>
+          <div class="cta-row">
+            <button class="btn-primary" onclick="addToCart()">Add to Cart →</button>
+            <a href="#how-to-use" class="btn-outline">Learn More</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BENEFITS ── -->
+  <section id="benefits" class="section">
+    <div class="container">
+      <div class="benefits-header reveal">
+        <p class="label" style="color:var(--gold)">Why Lumière</p>
+        <h2 class="benefits-title">The ritual your skin<br><em>has been waiting for</em></h2>
+      </div>
+      <div class="benefits-grid">
+        <div class="benefit-card reveal reveal-delay-1">
+          <span class="benefit-num">01</span>
+          <p>Visibly reduces dark circles and puffiness in as little as 20 minutes of wear.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-2">
+          <span class="benefit-num">02</span>
+          <p>Clinically proven peptide complex that signals fibroblasts to produce collagen and elastin.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-3">
+          <span class="benefit-num">03</span>
+          <p>Ultra-hydrating hydrogel technology continuously delivers moisture for up to 72 hours.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-1">
+          <span class="benefit-num">04</span>
+          <p>Pharmaceutical-grade niacinamide brightens, tightens pores, and restores luminosity.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-2">
+          <span class="benefit-num">05</span>
+          <p>Micro-encapsulated caffeine rapidly de-puffs and neutralizes dark circles caused by pooled blood.</p>
+        </div>
+        <div class="benefit-card reveal reveal-delay-3">
+          <span class="benefit-num">06</span>
+          <p>Free of parabens, sulfates, artificial fragrance, and alcohol. Safe for all skin types.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── INGREDIENTS ── -->
+  <section id="ingredients" class="section">
+    <div class="container">
+      <div class="ingredients-header">
+        <div class="reveal">
+          <p class="label section-label">The Formula</p>
+          <h2 class="section-title" style="margin-bottom:0">Bioactive ingredients,<br>meticulously chosen</h2>
+        </div>
+        <p class="ingredients-sub reveal reveal-delay-2">Every ingredient earns its place. No fillers, no compromises — only what your skin genuinely needs.</p>
+      </div>
+      <div class="ingredients-grid">
+        <div class="ing-card reveal reveal-delay-1" onclick="toggleIngredient(this)" data-desc="A proprietary blend of five bioactive peptides — including Argireline® and Matrixyl® 3000 — that signal fibroblasts to produce collagen and elastin, softening fine lines and firming the contour.">
+          <span class="ing-icon">✦</span>
+          <div class="ing-name">Peptide Complex</div>
+          <p class="ing-desc"></p>
+          <p class="ing-hint">Tap to discover →</p>
+        </div>
+        <div class="ing-card reveal reveal-delay-2" onclick="toggleIngredient(this)" data-desc="Sustainably sourced marine collagen with a molecular weight optimized for transdermal absorption, instantly plumping and restructuring the delicate under-eye skin matrix.">
+          <span class="ing-icon">◈</span>
+          <div class="ing-name">Marine Collagen</div>
+          <p class="ing-desc"></p>
+          <p class="ing-hint">Tap to discover →</p>
+        </div>
+        <div class="ing-card reveal reveal-delay-3" onclick="toggleIngredient(this)" data-desc="Stabilized, pharmaceutical-grade niacinamide that inhibits melanin transfer to visibly fade hyperpigmentation, tighten pores, and restore skin luminosity.">
+          <span class="ing-icon">◇</span>
+          <div class="ing-name">Niacinamide 5%</div>
+          <p class="ing-desc"></p>
+          <p class="ing-hint">Tap to discover →</p>
+        </div>
+        <div class="ing-card reveal reveal-delay-1" onclick="toggleIngredient(this)" data-desc="Micro-encapsulated caffeine that penetrates rapidly to constrict blood vessels, dramatically reducing puffiness and neutralizing dark circles caused by pooled blood.">
+          <span class="ing-icon">❋</span>
+          <div class="ing-name">Caffeine</div>
+          <p class="ing-desc"></p>
+          <p class="ing-hint">Tap to discover →</p>
+        </div>
+        <div class="ing-card reveal reveal-delay-2" onclick="toggleIngredient(this)" data-desc="Methylcobalamin, the most bioavailable form of B12, energizes skin cells, supports barrier repair, and imparts an immediate luminous glow to tired, dull under-eye skin.">
+          <span class="ing-icon">✧</span>
+          <div class="ing-name">Vitamin B12</div>
+          <p class="ing-desc"></p>
+          <p class="ing-hint">Tap to discover →</p>
+        </div>
+        <div class="ing-card reveal reveal-delay-3" onclick="toggleIngredient(this)" data-desc="A cross-linked polyacrylamide hydrogel infused with hyaluronic acid at three molecular weights, delivering continuous moisture for up to 72 hours while conforming perfectly to every contour.">
+          <span class="ing-icon">◉</span>
+          <div class="ing-name">Hydrogel Matrix</div>
+          <p class="ing-desc"></p>
+          <p class="ing-hint">Tap to discover →</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── HOW TO USE ── -->
+  <section id="how-to-use" class="section">
+    <div class="container">
+      <div class="how-grid">
+        <div class="reveal">
+          <p class="label section-label">The Ritual</p>
+          <h2 class="section-title">How to apply</h2>
+          <ol class="steps-list" style="list-style:none;padding:0">
+            <li class="step"><span class="step-num">1</span><p class="step-text">Cleanse and gently pat your face dry before application.</p></li>
+            <li class="step"><span class="step-num">2</span><p class="step-text">Carefully peel one pair of patches from the tray using the pull tab.</p></li>
+            <li class="step"><span class="step-num">3</span><p class="step-text">Apply the patches under each eye, smoothing gently from the inner corner outward.</p></li>
+            <li class="step"><span class="step-num">4</span><p class="step-text">Relax and leave on for 20–30 minutes. Do not move or fold the patches.</p></li>
+            <li class="step"><span class="step-num">5</span><p class="step-text">Remove patches and gently pat remaining serum into the skin — do not rinse.</p></li>
+            <li class="step"><span class="step-num">6</span><p class="step-text">Use 3–5 times per week, or as needed before special occasions.</p></li>
+          </ol>
+        </div>
+        <div class="how-img-wrap reveal reveal-delay-2">
+          <img class="how-img" src="https://images.unsplash.com/photo-1608248543803-ba4f8c70ae0b?w=800&q=85" alt="Applying Lumière Eye Patches" />
+          <div class="how-overlay"></div>
+          <div class="how-caption">
+            <em>20 minutes.</em>
+            <span>A lifetime of radiance.</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── REVIEWS ── -->
+  <section id="reviews" class="section">
+    <div class="container">
+      <div class="reviews-header">
+        <div class="reveal">
+          <p class="label section-label">Reviews</p>
+          <h2 class="section-title">Loved by <em>thousands</em></h2>
+        </div>
+        <div class="avg-rating-block reveal reveal-delay-2">
+          <div class="avg-num">5.0</div>
+          <div class="stars" style="justify-content:flex-end;margin-top:0.25rem">
+            <span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span><span class="star">★</span>
+          </div>
+          <div class="avg-count">2,400+ verified reviews</div>
+        </div>
+      </div>
+      <div class="reviews-carousel">
+        <div class="reviews-track" id="reviewsTrack">
+          <div class="review-card-big">
+            <div class="review-meta">
+              <div class="review-stars-big">★★★★★</div>
+              <span class="verified">✓ Verified Purchase</span>
+            </div>
+            <p class="review-title-big">"My morning ritual is incomplete without these"</p>
+            <p class="review-body-big">I have tried every high-end eye patch on the market — 111Skin, SK-II, Charlotte Tilbury. Lumière surpasses them all. The hydrogel texture is pure luxury and my under-eyes look genuinely rested after just one use.</p>
+            <div class="review-author-row">
+              <div class="reviewer-avatar">S</div>
+              <div><div class="reviewer-name">Sophia L.</div><div class="reviewer-location">New York, NY</div></div>
+            </div>
+          </div>
+          <div class="review-card-big">
+            <div class="review-meta">
+              <div class="review-stars-big">★★★★★</div>
+              <span class="verified">✓ Verified Purchase</span>
+            </div>
+            <p class="review-title-big">"Used before the Oscars — stunning results"</p>
+            <p class="review-body-big">As a makeup artist, I always keep these on hand for clients. They reduce puffiness in 20 minutes like nothing else I have used, and makeup applies flawlessly afterward. The glow is real.</p>
+            <div class="review-author-row">
+              <div class="reviewer-avatar">I</div>
+              <div><div class="reviewer-name">Isabelle M.</div><div class="reviewer-location">Los Angeles, CA</div></div>
+            </div>
+          </div>
+          <div class="review-card-big">
+            <div class="review-meta">
+              <div class="review-stars-big">★★★★★</div>
+              <span class="verified">✓ Verified Purchase</span>
+            </div>
+            <p class="review-title-big">"Worth every single penny"</p>
+            <p class="review-body-big">Four weeks in and I am getting compliments on my skin for the first time in years. The fine lines around my eyes have genuinely softened. My dermatologist specifically recommended the peptide complex.</p>
+            <div class="review-author-row">
+              <div class="reviewer-avatar">A</div>
+              <div><div class="reviewer-name">Aiko T.</div><div class="reviewer-location">San Francisco, CA</div></div>
+            </div>
+          </div>
+          <div class="review-card-big">
+            <div class="review-meta">
+              <div class="review-stars-big">★★★★★</div>
+              <span class="verified">✓ Verified Purchase</span>
+            </div>
+            <p class="review-title-big">"Absolute game-changer for tired skin"</p>
+            <p class="review-body-big">Between red-eye flights and long work weeks, my eyes always look exhausted. These patches are the only thing that makes me look human again. The cooling hydrogel sensation is incredible.</p>
+            <div class="review-author-row">
+              <div class="reviewer-avatar">C</div>
+              <div><div class="reviewer-name">Charlotte B.</div><div class="reviewer-location">Miami, FL</div></div>
+            </div>
+          </div>
+          <div class="review-card-big">
+            <div class="review-meta">
+              <div class="review-stars-big">★★★★★</div>
+              <span class="verified">✓ Verified Purchase</span>
+            </div>
+            <p class="review-title-big">"The vitamin B12 glow is real"</p>
+            <p class="review-body-big">I noticed a visible glow after just the first use — something I have never experienced with other eye patches. I have since switched my whole routine to Lumière. Cannot recommend this brand enough.</p>
+            <div class="review-author-row">
+              <div class="reviewer-avatar">N</div>
+              <div><div class="reviewer-name">Natalia R.</div><div class="reviewer-location">Chicago, IL</div></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="carousel-controls">
+        <button class="carousel-btn" onclick="scrollReviews(-1)" aria-label="Previous">‹</button>
+        <button class="carousel-btn" onclick="scrollReviews(1)" aria-label="Next">›</button>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── SUBSCRIPTION ── -->
+  <section id="subscription" class="section">
+    <div class="container">
+      <div style="text-align:center;margin-bottom:3rem" class="reveal">
+        <p class="label" style="color:var(--gold)">Choose Your Ritual</p>
+        <h2 style="font-family:'Cormorant Garamond',serif;font-size:clamp(2rem,4vw,3.25rem);color:white;line-height:1.1;margin-top:0.75rem">One-time or monthly — <em style="font-style:italic">your choice</em></h2>
+      </div>
+      <div class="sub-grid">
+        <div class="sub-card reveal reveal-delay-1">
+          <p class="sub-type">One-Time Purchase</p>
+          <div><span class="sub-price-main">$48.00</span></div>
+          <p class="sub-compare">30 pairs · Free shipping</p>
+          <ul class="sub-features">
+            <li class="sub-feature"><span class="sub-check">✓</span>30 pairs (60 individual patches)</li>
+            <li class="sub-feature"><span class="sub-check">✓</span>Free standard shipping</li>
+            <li class="sub-feature"><span class="sub-check">✓</span>30-Day Radiance Guarantee</li>
+            <li class="sub-feature"><span class="sub-check">✓</span>Complimentary samples</li>
+          </ul>
+          <button class="sub-btn-outline-white" onclick="addToCart()">Add to Cart →</button>
+        </div>
+        <div class="sub-card featured reveal reveal-delay-2">
+          <span class="popular-badge">MOST POPULAR</span>
+          <p class="sub-type">Subscribe &amp; Save</p>
+          <div><span class="sub-price-main">$40.80</span><span class="sub-price-period">/mo</span></div>
+          <p class="sub-compare" style="text-decoration-color:rgba(255,255,255,0.5)"><span style="text-decoration:line-through">$48.00</span> — Save 15%</p>
+          <ul class="sub-features">
+            <li class="sub-feature"><span class="sub-check">✓</span>30 pairs monthly · Auto-replenishment</li>
+            <li class="sub-feature"><span class="sub-check">✓</span>Free priority shipping every month</li>
+            <li class="sub-feature"><span class="sub-check">✓</span>30-Day Radiance Guarantee</li>
+            <li class="sub-feature"><span class="sub-check">✓</span>Early access to new products</li>
+            <li class="sub-feature"><span class="sub-check">✓</span>Dedicated loyalty rewards</li>
+          </ul>
+          <button class="sub-btn-white" onclick="addToCart()">Subscribe &amp; Save →</button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── BRAND STORY ── -->
+  <section id="story" class="section">
+    <div class="container">
+      <span class="story-icon">✦</span>
+      <p class="label" style="margin-bottom:1.5rem">Our Story</p>
+      <h2 class="story-title reveal">Born from belief.<br><em>Built on science.</em></h2>
+      <p class="story-body reveal reveal-delay-2">Lumière was founded by a cosmetic scientist and a luxury brand director who believed that the most effective formulas shouldn't require a PhD to understand — or a second mortgage to afford. Three years. 200 formula iterations. One perfect patch.</p>
+      <div class="story-ctas reveal reveal-delay-3">
+        <a href="#feature" class="btn-dark">Shop the Eye Patch →</a>
+        <a href="#" class="btn-outline">Our Full Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── GUARANTEE ── -->
+  <section id="guarantee">
+    <div class="container">
+      <div class="guarantee-grid">
+        <div class="guarantee-item">
+          <div class="guarantee-icon">🚚</div>
+          <div>
+            <div class="guarantee-label">Free Shipping</div>
+            <div class="guarantee-sub">On all orders over $50</div>
+          </div>
+        </div>
+        <div class="guarantee-item">
+          <div class="guarantee-icon">↩</div>
+          <div>
+            <div class="guarantee-label">30-Day Returns</div>
+            <div class="guarantee-sub">The Radiance Guarantee</div>
+          </div>
+        </div>
+        <div class="guarantee-item">
+          <div class="guarantee-icon">🔒</div>
+          <div>
+            <div class="guarantee-label">Secure Payment</div>
+            <div class="guarantee-sub">SSL encrypted checkout</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FINAL CTA ── -->
+  <section id="cta" class="section">
+    <div class="container" style="text-align:center">
+      <p class="label" style="margin-bottom:1.5rem">Begin Your Ritual</p>
+      <h2 class="cta-title reveal">Your most radiant skin<br><em>starts today</em></h2>
+      <p class="cta-body reveal reveal-delay-2">Join thousands of women who have reclaimed their glow with Lumière. Backed by science, proven by results. 30-day money-back guarantee.</p>
+      <div class="cta-btns reveal reveal-delay-3">
+        <button class="btn-primary" onclick="addToCart()">Shop Now — $48.00 →</button>
+        <a href="#story" class="btn-outline">Learn Our Story</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- ── FOOTER ── -->
+  <footer>
+    <div class="container">
+      <!-- Newsletter -->
+      <div class="footer-newsletter">
+        <div class="inner">
+          <div>
+            <div class="newsletter-heading">Join the Ritual</div>
+            <div class="newsletter-sub">15% off your first order. Expert skincare tips. No spam, ever.</div>
+          </div>
+          <form class="newsletter-form" onsubmit="handleNewsletter(event)">
+            <input type="email" class="newsletter-input" placeholder="Your email address" required />
+            <button type="submit" class="newsletter-btn">Subscribe</button>
+          </form>
+        </div>
+      </div>
+
+      <!-- Main footer grid -->
+      <div class="footer-main">
+        <div class="footer-grid">
+          <div>
+            <div class="footer-logo">✦ LUMIÈRE</div>
+            <p class="footer-tagline">Radiance through science.<br>Luxury through ritual.</p>
+            <div class="social-links">
+              <a href="#" class="social-link" aria-label="Instagram">◎</a>
+              <a href="#" class="social-link" aria-label="Facebook">□</a>
+              <a href="#" class="social-link" aria-label="YouTube">▷</a>
+            </div>
+          </div>
+          <div>
+            <p class="footer-col-title">Shop</p>
+            <ul class="footer-links">
+              <li><a href="#feature">Eye Patches</a></li>
+              <li><a href="#subscription">Subscribe &amp; Save</a></li>
+              <li><a href="#feature">Gift Sets</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-col-title">Company</p>
+            <ul class="footer-links">
+              <li><a href="#story">About Lumière</a></li>
+              <li><a href="#ingredients">Our Science</a></li>
+              <li><a href="#">Contact Us</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-col-title">Support</p>
+            <ul class="footer-links">
+              <li><a href="#">FAQ</a></li>
+              <li><a href="#">Shipping Info</a></li>
+              <li><a href="#">Returns</a></li>
+            </ul>
+          </div>
+          <div>
+            <p class="footer-col-title">Legal</p>
+            <ul class="footer-links">
+              <li><a href="#">Privacy Policy</a></li>
+              <li><a href="#">Terms of Service</a></li>
+              <li><a href="#">Refund Policy</a></li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-copy">© 2026 Lumière Beauty. All rights reserved.</p>
+          <div class="footer-status">
+            <div class="status-dot"></div>
+            <span>All Systems Operational</span>
+          </div>
+          <p class="footer-stripe">Secure Payments via STRIPE</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // ── Navbar scroll ──
+    const navbar = document.getElementById('navbar');
+    window.addEventListener('scroll', () => {
+      navbar.classList.toggle('scrolled', window.scrollY > 60);
+    }, { passive: true });
+
+    // ── Intersection Observer (reveal on scroll) ──
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); } });
+    }, { threshold: 0.12 });
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ── Ingredient cards ──
+    function toggleIngredient(card) {
+      const desc = card.querySelector('.ing-desc');
+      const isActive = card.classList.contains('active');
+      // Close all
+      document.querySelectorAll('.ing-card').forEach(c => {
+        c.classList.remove('active');
+        c.querySelector('.ing-desc').textContent = '';
+      });
+      if (!isActive) {
+        card.classList.add('active');
+        desc.textContent = card.dataset.desc;
+      }
+    }
+
+    // ── Reviews carousel ──
+    let reviewIndex = 0;
+    function scrollReviews(dir) {
+      const track = document.getElementById('reviewsTrack');
+      const cards = track.querySelectorAll('.review-card-big');
+      const visibleCount = window.innerWidth >= 1024 ? 3 : window.innerWidth >= 640 ? 2 : 1;
+      const maxIndex = Math.max(0, cards.length - visibleCount);
+      reviewIndex = Math.max(0, Math.min(maxIndex, reviewIndex + dir));
+      const cardWidth = cards[0].offsetWidth + 24; // gap = 1.5rem = 24px
+      track.style.transform = `translateX(-${reviewIndex * cardWidth}px)`;
+    }
+    // Auto-scroll reviews
+    setInterval(() => scrollReviews(1), 5000);
+
+    // ── Cart ──
+    let cartCount = 0;
+    function addToCart() {
+      cartCount++;
+      const toast = document.getElementById('cart-toast');
+      toast.classList.add('show');
+      setTimeout(() => toast.classList.remove('show'), 2200);
+    }
+
+    // ── Newsletter ──
+    function handleNewsletter(e) {
+      e.preventDefault();
+      const btn = e.target.querySelector('button');
+      const input = e.target.querySelector('input');
+      btn.textContent = '✓ Subscribed!';
+      btn.style.background = '#10B981';
+      input.value = '';
+      setTimeout(() => { btn.textContent = 'Subscribe'; btn.style.background = ''; }, 3000);
+    }
+
+    // ── Smooth anchor scroll ──
+    document.querySelectorAll('a[href^="#"]').forEach(a => {
+      a.addEventListener('click', e => {
+        const target = document.querySelector(a.getAttribute('href'));
+        if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth', block: 'start' }); }
+      });
+    });
+  </script>
+</body>
+</html>
