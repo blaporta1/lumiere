@@ -14,7 +14,7 @@ import { LUMIERE_PRODUCT } from '@/lib/products';
 import AddToCartButton from '@/components/AddToCartButton';
 import ReviewCarousel from '@/components/ReviewCarousel';
 import IngredientGrid from '@/components/IngredientGrid';
-import { formatPrice } from '@/lib/stripe';
+import { formatPrice } from '@/lib/utils';
 
 const trustBadges = [
   {
